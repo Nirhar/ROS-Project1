@@ -1,0 +1,2 @@
+robot_description
+-DCATKIN_DEVEL_PREFIX=/home/nirhar/Documents/Robotics/Workspace2/devel -DCMAKE_INSTALL_PREFIX=/home/nirhar/Documents/Robotics/Workspace2/install -G Unix Makefiles
