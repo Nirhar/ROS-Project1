@@ -3,7 +3,7 @@
 <robot xmlns:xacro="http://ros.org/wiki/xacro" name="robot_base">
     <xacro:include filename="$(find robot_description)/urdf/robot_arm_essentials.xacro" />
     <xacro:include filename="$(find robot_description)/urdf/gazebo_essentials_arm.xacro" />
-    <link name="world"/>
+    <link name="base_link"></link>
     <link name="arm_base">
         <inertial>
             <origin xyz="7.7128E-09 -0.063005 -3.01969999961422E-08" rpy="0 0 0" />
@@ -119,8 +119,8 @@
             </geometry>
         </collision>
     </link>
-
-    <xacro:arm_joint prefix="arm_base" parent="world" child="arm_base" originxyz="0.0 0.0 0.1" originrpy="0 0 0"/>
+    
+    <xacro:arm_joint prefix="arm_base" parent="base_link" child="arm_base" originxyz="0.0 0.0 0.1" originrpy="0 0 0"/>
     <xacro:arm_joint prefix="shoulder" parent="arm_base" child="bicep" originxyz="-0.05166 0.0 0.20271" originrpy="0 0 1.5708" />
     <xacro:arm_joint prefix="bottom_wrist" parent="bicep" child="bottom_wrist" originxyz="0.0 -0.05194 0.269" originrpy="0 0 0" />
     <xacro:arm_joint prefix="elbow" parent="bottom_wrist" child="elbow" originxyz="0.0 0 0.13522" originrpy="0 0 0" />

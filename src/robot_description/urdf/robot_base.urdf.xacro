@@ -2,7 +2,7 @@
 <robot xmlns:xacro="http://ros.org/wiki/xacro" name="robot_base">
     <xacro:include filename="$(find robot_description)/urdf/robot_essentials.xacro" />
     <xacro:include filename="$(find robot_description)/urdf/gazebo_essentials_base.xacro" />
-
+    
     <link name="base_link">
         <inertial>
             <origin xyz="0.0030946 4.78250032638821E-11 0.053305" rpy="0 0 0" />
